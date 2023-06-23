@@ -16,6 +16,7 @@ I'm using Pop_OS 22.04 distribution, so you should be able to reproduce the same
 - Choose the detected printer (it should be the first one on the list).
 - Choose the driver as 'Epson' click on forward.
 - Choose the model as 'TM BA Thermal' click on forward and apply.
+- Name or rename your printer, you're going to use that name on the following line on the code: `interface: 'printer:EPSON-TM-T20X',`.
 - You should be able to print a test page.
 
 ### Installation
@@ -42,5 +43,3 @@ Create the following `config.json` file:
 
 - Where `me` you should put your `chat_id` from Telegram.
 - Where `telegramAuthorizationToken` you should replace by your bot_token provided by BotFather.
-
-### Example

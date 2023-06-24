@@ -66,3 +66,18 @@ bot.onText(/\/label (.+)/gm, async (msg, match) => {
         bot.sendMessage(msg.chat.id, "🖨️" + e);
     }
 });
+
+bot.onText(/\/qrcode (.+)/gm, async (msg, match) => {
+    try {
+        const params = match[MY_MESSAGE].split(",")
+        printer.printQR(params[MY_MESSAGE].trim(), {
+            cellSize: Number(params[0].trim())
+        });
+        printer.cut();
+        const execute = await printer.execute();
+        printer.clear();
+        bot.sendMessage(msg.chat.id, "🖨️" + execute);
+    } catch (e) {
+        bot.sendMessage(msg.chat.id, "🖨️" + e);
+    }
+});

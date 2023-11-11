@@ -10,7 +10,7 @@
   "description": "",
   "dependencies": {
     "@thiagoelg/node-printer": "^0.6.2",
-    "axios": "^1.4.0",
+    "axios": "^1.6.0",
     "jimp": "^0.22.8",
     "node-telegram-bot-api": "^0.61.0",
     "node-thermal-printer": "^4.2.0"
